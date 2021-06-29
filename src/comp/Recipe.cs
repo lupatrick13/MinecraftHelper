@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,13 @@ namespace MinecraftHelper.src.comp
         protected string name;
         protected unit type;
         protected int amt_make;
+        protected TreeNode node;
         private List<Tuple<Recipe, int>> children;
         #region SettersGetters
+        public TreeNode Node
+        {
+            get { return node; }
+        }
         public List<Tuple<Recipe, int>> Components
         {
             get
@@ -60,6 +66,11 @@ namespace MinecraftHelper.src.comp
             this.name = name;
             this.type = type;
             this.amt_make = amt_make;
+            node = new TreeNode(name)
+            {
+                Name = name,
+                Tag = 1
+            };
             children = new List<Tuple<Recipe, int>>();
         }
         public string description(int amt = 1, int level = 0)
@@ -72,18 +83,40 @@ namespace MinecraftHelper.src.comp
 
             foreach (Tuple<Recipe, int> node in children)
             {
-                result += node.Item1.description(node.Item2 * amt_temp, level + 1);
+                if(node.Item1 != this)
+                    result += node.Item1.description(node.Item2 * amt_temp, level + 1);
             }
 
             return result;
         }
         public void add(Recipe comp, int amt)
         {
+            int times_craft = (amt + comp.Made - 1) / comp.Made;
+            TreeNode addedNode = (TreeNode)comp.Node.Clone();
+            addedNode.Text = amt.ToString() + " " + addedNode.Text;
+            addedNode.Tag = times_craft;
+            node.Nodes.Add(addedNode);
             children.Add(Tuple.Create(comp, amt));
+
         }
         public void delete(Recipe comp)
         {
             children.RemoveAll(item => item.Item1 == comp);
+            node.Nodes.RemoveByKey(comp.Name);
+        }
+        public void Refresh()
+        {
+            node.Nodes.Clear();
+            foreach(Tuple<Recipe, int> token in children)
+            {
+                if(token.Item1 != this)
+                    token.Item1.Refresh();
+                int times_craft = (token.Item2 + token.Item1.Made - 1) / token.Item1.Made;
+                TreeNode addedNode = (TreeNode)token.Item1.Node.Clone();
+                addedNode.Text = token.Item2.ToString() + " " + addedNode.Text;
+                addedNode.Tag = times_craft;
+                node.Nodes.Add(addedNode);
+            }
         }
     }
     class RecipeFacade

@@ -8,3 +8,13 @@ C:\Users\lupat\source\repos\MinecraftHelper\obj\Debug\MinecraftHelper.csproj.Cor
 C:\Users\lupat\source\repos\MinecraftHelper\obj\Debug\MinecraftHelper.exe
 C:\Users\lupat\source\repos\MinecraftHelper\obj\Debug\MinecraftHelper.pdb
 C:\Users\lupat\source\repos\MinecraftHelper\obj\Debug\MinecraftHelper.csproj.AssemblyReference.cache
+C:\Users\sabri\Source\Repos\MinecraftHelper\bin\Debug\MinecraftHelper.exe.config
+C:\Users\sabri\Source\Repos\MinecraftHelper\bin\Debug\MinecraftHelper.exe
+C:\Users\sabri\Source\Repos\MinecraftHelper\bin\Debug\MinecraftHelper.pdb
+C:\Users\sabri\Source\Repos\MinecraftHelper\obj\Debug\MinecraftHelper.csproj.AssemblyReference.cache
+C:\Users\sabri\Source\Repos\MinecraftHelper\obj\Debug\MinecraftHelper.Form1.resources
+C:\Users\sabri\Source\Repos\MinecraftHelper\obj\Debug\MinecraftHelper.Properties.Resources.resources
+C:\Users\sabri\Source\Repos\MinecraftHelper\obj\Debug\MinecraftHelper.csproj.GenerateResource.cache
+C:\Users\sabri\Source\Repos\MinecraftHelper\obj\Debug\MinecraftHelper.csproj.CoreCompileInputs.cache
+C:\Users\sabri\Source\Repos\MinecraftHelper\obj\Debug\MinecraftHelper.exe
+C:\Users\sabri\Source\Repos\MinecraftHelper\obj\Debug\MinecraftHelper.pdb

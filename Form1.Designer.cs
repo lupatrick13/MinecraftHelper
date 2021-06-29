@@ -36,6 +36,7 @@ namespace MinecraftHelper
             this.AddRecipeButton_Submit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TestTree = new System.Windows.Forms.TreeView();
             this.AddRecipe_Type = new System.Windows.Forms.ComboBox();
             this.AddRecipeText_Amt = new System.Windows.Forms.TextBox();
             this.AddRecipeText_Name = new System.Windows.Forms.TextBox();
@@ -45,20 +46,19 @@ namespace MinecraftHelper
             this.recipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ER_DataGrid = new System.Windows.Forms.DataGridView();
+            this.recipeFacadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ER_DM_SUB = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ER_AM_AMT = new System.Windows.Forms.NumericUpDown();
+            this.ER_AM_SUB = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ER_AM_ChoicesList = new System.Windows.Forms.ListBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.componentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.needDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.recipeFacadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ER_DM_SUB = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ER_AM_SUB = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ER_AM_AMT = new System.Windows.Forms.TextBox();
-            this.ER_AM_ChoicesList = new System.Windows.Forms.ListBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.componentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -68,6 +68,7 @@ namespace MinecraftHelper
             ((System.ComponentModel.ISupportInitialize)(this.ER_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipeFacadeBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ER_AM_AMT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,6 +106,7 @@ namespace MinecraftHelper
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabPage1.Controls.Add(this.TestTree);
             this.tabPage1.Controls.Add(this.AddRecipe_Type);
             this.tabPage1.Controls.Add(this.AddRecipeText_Amt);
             this.tabPage1.Controls.Add(this.AddRecipeText_Name);
@@ -115,6 +117,13 @@ namespace MinecraftHelper
             this.tabPage1.Size = new System.Drawing.Size(774, 245);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Recipe";
+            // 
+            // TestTree
+            // 
+            this.TestTree.Location = new System.Drawing.Point(506, 17);
+            this.TestTree.Name = "TestTree";
+            this.TestTree.Size = new System.Drawing.Size(247, 206);
+            this.TestTree.TabIndex = 9;
             // 
             // AddRecipe_Type
             // 
@@ -219,56 +228,20 @@ namespace MinecraftHelper
             this.nameDataGridViewTextBoxColumn,
             this.needDataGridViewTextBoxColumn,
             this.makesDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.Column1});
+            this.typeDataGridViewTextBoxColumn});
             this.ER_DataGrid.DataSource = this.recipeFacadeBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ER_DataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.ER_DataGrid.Location = new System.Drawing.Point(6, 16);
-            this.ER_DataGrid.MultiSelect = false;
             this.ER_DataGrid.Name = "ER_DataGrid";
             this.ER_DataGrid.Size = new System.Drawing.Size(398, 175);
             this.ER_DataGrid.TabIndex = 7;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // needDataGridViewTextBoxColumn
-            // 
-            this.needDataGridViewTextBoxColumn.DataPropertyName = "Need";
-            this.needDataGridViewTextBoxColumn.HeaderText = "Needs";
-            this.needDataGridViewTextBoxColumn.Name = "needDataGridViewTextBoxColumn";
-            this.needDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // makesDataGridViewTextBoxColumn
-            // 
-            this.makesDataGridViewTextBoxColumn.DataPropertyName = "Makes";
-            this.makesDataGridViewTextBoxColumn.HeaderText = "Makes";
-            this.makesDataGridViewTextBoxColumn.Name = "makesDataGridViewTextBoxColumn";
-            this.makesDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Selected";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 55;
             // 
             // recipeFacadeBindingSource
             // 
@@ -283,12 +256,13 @@ namespace MinecraftHelper
             this.ER_DM_SUB.TabIndex = 5;
             this.ER_DM_SUB.Text = "Delete";
             this.ER_DM_SUB.UseVisualStyleBackColor = true;
+            this.ER_DM_SUB.Click += new System.EventHandler(this.ER_DM_SUB_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ER_AM_AMT);
             this.groupBox1.Controls.Add(this.ER_AM_SUB);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.ER_AM_AMT);
             this.groupBox1.Controls.Add(this.ER_AM_ChoicesList);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(182, 9);
@@ -298,32 +272,46 @@ namespace MinecraftHelper
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Materials";
             // 
+            // ER_AM_AMT
+            // 
+            this.ER_AM_AMT.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ER_AM_AMT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ER_AM_AMT.Location = new System.Drawing.Point(37, 202);
+            this.ER_AM_AMT.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.ER_AM_AMT.Name = "ER_AM_AMT";
+            this.ER_AM_AMT.Size = new System.Drawing.Size(50, 16);
+            this.ER_AM_AMT.TabIndex = 5;
+            this.ER_AM_AMT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ER_AM_AMT.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // ER_AM_SUB
             // 
             this.ER_AM_SUB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ER_AM_SUB.Location = new System.Drawing.Point(112, 204);
+            this.ER_AM_SUB.Location = new System.Drawing.Point(119, 197);
             this.ER_AM_SUB.Name = "ER_AM_SUB";
             this.ER_AM_SUB.Size = new System.Drawing.Size(45, 23);
             this.ER_AM_SUB.TabIndex = 4;
             this.ER_AM_SUB.Text = "Add";
             this.ER_AM_SUB.UseVisualStyleBackColor = true;
+            this.ER_AM_SUB.Click += new System.EventHandler(this.ER_AM_SUB_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(6, 191);
+            this.label1.Location = new System.Drawing.Point(6, 202);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Amount";
-            // 
-            // ER_AM_AMT
-            // 
-            this.ER_AM_AMT.Location = new System.Drawing.Point(6, 207);
-            this.ER_AM_AMT.Name = "ER_AM_AMT";
-            this.ER_AM_AMT.Size = new System.Drawing.Size(100, 20);
-            this.ER_AM_AMT.TabIndex = 2;
+            this.label1.Text = "Amt";
             // 
             // ER_AM_ChoicesList
             // 
@@ -356,6 +344,38 @@ namespace MinecraftHelper
             this.componentsBindingSource.DataMember = "Components";
             this.componentsBindingSource.DataSource = this.recipeBindingSource;
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // needDataGridViewTextBoxColumn
+            // 
+            this.needDataGridViewTextBoxColumn.DataPropertyName = "Need";
+            this.needDataGridViewTextBoxColumn.HeaderText = "Needs";
+            this.needDataGridViewTextBoxColumn.Name = "needDataGridViewTextBoxColumn";
+            this.needDataGridViewTextBoxColumn.ReadOnly = true;
+            this.needDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // makesDataGridViewTextBoxColumn
+            // 
+            this.makesDataGridViewTextBoxColumn.DataPropertyName = "Makes";
+            this.makesDataGridViewTextBoxColumn.HeaderText = "Makes";
+            this.makesDataGridViewTextBoxColumn.Name = "makesDataGridViewTextBoxColumn";
+            this.makesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.makesDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.Width = 60;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,6 +400,7 @@ namespace MinecraftHelper
             ((System.ComponentModel.ISupportInitialize)(this.recipeFacadeBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ER_AM_AMT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -401,7 +422,6 @@ namespace MinecraftHelper
         private System.Windows.Forms.TabPage tabPage3;
         private System.ComponentModel.BindingList<MinecraftHelper.src.comp.Recipe> CurrentRecipes;
         private System.Windows.Forms.BindingSource recipeBindingSource;
-        private System.Windows.Forms.TextBox ER_AM_AMT;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button ER_AM_SUB;
         private System.Windows.Forms.Label label1;
@@ -411,11 +431,13 @@ namespace MinecraftHelper
         private System.Windows.Forms.DataGridView ER_DataGrid;
         private System.Windows.Forms.BindingSource componentsBindingSource;
         private System.Windows.Forms.BindingSource recipeFacadeBindingSource;
+        private System.Windows.Forms.TreeView TestTree;
+        private MinecraftHelper.src.comp.Recipe ER_SelectedRecipe;
+        private System.Windows.Forms.NumericUpDown ER_AM_AMT;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn needDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn makesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }
 
